@@ -26,6 +26,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # PostgreSQL
 gem 'pg'
 
+gem "twitter-bootstrap-rails"
+gem 'bootstrap-will_paginate'
+gem 'bootstrap-sass'
+
+# Devise authentication
+gem 'devise'
+gem 'omniauth'
+
+#PgSearch builds named scopes that take advantage of PostgreSQL's full text search.
+gem 'pg_search'
+
+#will_paginate is a pagination library that integrates with Ruby on Rails
+gem 'will_paginate', '~> 3.0.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
