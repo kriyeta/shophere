@@ -1,0 +1,20 @@
+<div class="navbar navbar-default navbar-fixed-top header" id="header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo" id="logo" href="/"><%= image_tag("Shop_Here.png", :alt => "Shop Here", :size => "100x60") %></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      <ul class="nav navbar-nav navbar-right header-login-nav" id="header-login-nav">
+        <li>
+          <%= link_to('Login', new_user_session_path) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

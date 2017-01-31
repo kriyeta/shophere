@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shophere</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>ShopHere</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if user_signed_in? %>
+    <%= render 'layouts/authenticated_user/header' %>
+<% else %>
+    <%= render 'layouts/non_authenticated_user/header' %>
+<% end %>
 
-<%= yield %>
-
+<div class="main-content text-center">
+  <div style="margin-top: 50px; padding-top: 30px;">
+    <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+  </div>
+  <%= yield %>
+</div>
+<%= render 'layouts/non_authenticated_user/footer' %>
 </body>
 </html>

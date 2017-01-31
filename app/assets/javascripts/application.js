@@ -12,5 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(window).scroll(function() {
+    if (window.location.href.toString().indexOf("alumni_personal_info") > -1) {
+        $('.loggedin-header-update-profile-prompt').hide();
+    }
+    else if ($(this).scrollTop() > 0) {
+        $('.loggedin-header-update-profile-prompt').fadeOut();
+    }
+    else {
+        $('.loggedin-header-update-profile-prompt').fadeIn();
+    }
+});
